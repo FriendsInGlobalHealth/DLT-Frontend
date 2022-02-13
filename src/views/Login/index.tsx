@@ -4,7 +4,7 @@ import { Dispatch, AnyAction } from 'redux';
 import { connect } from 'dva';
 import { View, KeyboardAvoidingView, 
         Image, TextInput, TouchableOpacity, 
-        Text, Button} 
+        Text, Button, Platform} 
         from 'react-native';
 import { AuthModelState, Loading } from '../../models/Auth'
 // import { Form } from '@unform/mobile';
@@ -54,7 +54,7 @@ export default class Login extends Component<LoginProps, LoginState>{
         if(this.validate_field() && dispatch){
             // login();
            // alert("Login efectuado com sucesso!!!")~
-            console.log(username, password);
+            //console.log(username, password);
             dispatch({
                 type: 'auth/login',
                 payload: {

@@ -7,6 +7,8 @@ import { Users, UsersModelState } from '../models/Users';
 import { AuthModelState } from '../models/Auth';
 //import AuthRoutes from '../routes/auth.routes';
 import AppRoutes from '../routes';
+import DrawerNavigation from '../routes/DrawerNavigator';
+import AuthNavigation from '../routes/AuthNavigator'
 
 
 /*export interface ConnectProps<T = {}> extends Partial<RouterTypes<Route, T>> {
@@ -59,7 +61,8 @@ class SecurityContext extends Component<SecurityLayoutProps, SecurityState> {
             );
         }
         
-        return <AppRoutes/>;
+        const isLogged1 = true;
+        return isLogged1 ? <DrawerNavigation /> : <AuthNavigation />;
        
     }
 
