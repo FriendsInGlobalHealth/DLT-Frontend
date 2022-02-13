@@ -10,7 +10,6 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigation: React.FC = () => (
     <Drawer.Navigator
     >
-        
          <Drawer.Screen name="Home" component={HomeNavigator} />
        
     </Drawer.Navigator>

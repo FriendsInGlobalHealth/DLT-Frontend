@@ -49,7 +49,7 @@ class SecurityContext extends Component<SecurityLayoutProps, SecurityState> {
 
     render() {
         const { isReady } = this.state;
-        const {children, loading, currentUser, logged, dispatch } = this.props;
+        const { loading, currentUser, logged } = this.props;
 
         const isLogged = logged && currentUser !== undefined;
 
@@ -61,8 +61,8 @@ class SecurityContext extends Component<SecurityLayoutProps, SecurityState> {
             );
         }
         
-        const isLogged1 = true;
-        return isLogged1 ? <DrawerNavigation /> : <AuthNavigation />;
+        return <AppRoutes />
+       // return isLogged ? <DrawerNavigation /> : <AuthNavigation />;
        
     }
 

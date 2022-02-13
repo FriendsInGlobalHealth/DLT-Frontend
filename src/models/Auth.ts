@@ -64,7 +64,7 @@ const AuthModel: AuthModelType = {
 
                 setAuthorization(data.token);
 
-                navigate({name: "Home", params: {}});
+                navigate({name: "Main", params: {}});
             }
             
         },
