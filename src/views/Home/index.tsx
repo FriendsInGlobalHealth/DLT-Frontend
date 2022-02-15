@@ -8,12 +8,14 @@ import styles from './styles';
 import Footer from '../../components/Mobile/Footer';
 import Dashboard from '../../components/Dashboard';
 import DashCard from '../../components/Mobile/DashCard';
+import { Button } from 'react-native-elements';
+import { navigate } from '../../routes/RootNavigation';
 
 export default function Home(){
     return (
         <View style={styles.container}>
-
            
+
         </View>
     )    
 }

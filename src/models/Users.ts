@@ -2,6 +2,16 @@ import { Effect } from 'dva';
 import { Reducer } from 'redux';
 import { add, edit, query } from '../services/users';
 
+export interface Loading {
+    effects: { [key: string]: boolean | undefined };
+    models: {
+      global?: boolean;
+      menu?: boolean;
+      user?: boolean;
+      login?: boolean;
+    };
+}
+
 
 export interface Users {
   id?: string,
@@ -27,7 +37,8 @@ export interface Users {
 }
 
 export interface UsersModelState{
-    users: Users[]
+  loading?: Loading,
+  users: Users[]
 }
 
 export interface UsersModelType {
@@ -49,7 +60,13 @@ const UsersModel: UsersModelType = {
     namespace: 'users',
 
     state: {
-        users: []
+      loading: {
+        effects: {
+          'users/create':true
+        },
+        models:{}
+      },
+      users: []
     },
 
     effects: {

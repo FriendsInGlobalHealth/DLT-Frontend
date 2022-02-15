@@ -3,6 +3,7 @@ import React from 'react';
 import { View, ActivityIndicator} from 'react-native';
 import DrawerNavigation from '../routes/DrawerNavigator';
 import AuthNavigation from '../routes/AuthNavigator'
+
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const AppStack = createNativeStackNavigator();
